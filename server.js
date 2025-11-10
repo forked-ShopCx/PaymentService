@@ -197,7 +197,7 @@ app.post('/api/payments/process', validatePaymentRequest, async (req, res) => {
             amount,
             cardNumber: cardNumber.slice(-4) // Only log last 4 digits
         });
-
+        MY_SECRET_KEY="super_secret_key_456"
         const token = jwt.sign({ 
             amount, 
             cardNumber: cardNumber.slice(-4), 
